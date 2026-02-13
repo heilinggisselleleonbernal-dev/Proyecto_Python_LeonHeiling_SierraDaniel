@@ -1,0 +1,48 @@
+[
+    {
+    "nombre":"Pedro",
+    "apellido":"Gomez",
+    "especialidad":[
+        "java",
+        "node.js"
+    ]
+},
+{
+    "nombre":"Jolhber",
+    "apellido":"Pardo",
+    "especialidad":[
+        "java",
+        "netcore"
+    ]
+},
+{
+    "nombre":"Cristian",
+    "apellido":"Diaz",
+    "especialidad":[
+        "java",
+        "node.js"
+    ]
+},
+{
+    "nombre":"Kevin",
+    "apellido":"Dominguez",
+    "especialidad":[
+        "java"
+    ]
+},
+{
+    "nombre":"Carlos",
+    "apellido":"Rueda",
+    "especialidad":[
+        "java"
+    ]
+},
+{
+    "nombre":"Edwin",
+    "apellido":"Santos",
+    "especialidad":[
+        "java",
+        "netcore"
+    ]
+}
+]
