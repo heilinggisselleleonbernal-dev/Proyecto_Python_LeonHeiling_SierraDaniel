@@ -1,6 +1,7 @@
 import json
 import os
 from coordinador import menu_Coordinador
+from inscripcion import proceso_inscripcion
 
 def cargar_Usuarios():
     ruta = os.path.join(os.path.dirname(__file__), "cuentas.json")
@@ -27,14 +28,11 @@ while True:
                 print("haz iniciado sesion")
                 if usuario["rol"] == "coordinador":
                    menu_Coordinador()
-            break
+                break
         
         if not encontrado:
             print("el usuario no fue encontrado")
-        
-
-                   
-
-            
-
+    
+    elif opcion == 2:
+        proceso_inscripcion()
 

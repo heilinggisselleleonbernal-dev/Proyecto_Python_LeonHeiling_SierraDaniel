@@ -1,7 +1,17 @@
 [
     {
-        "correo":"coordinador@gmail.com",
+        "correo": "coordinador@gmail.com",
         "password": "1234",
         "rol": "coordinador"
+    },
+    {
+        "correo": "heiling@gmail.com",
+        "password": "1234",
+        "rol": "camper"
+    },
+    {
+        "correo": "sebastianfeo@gmail.com",
+        "password": "1234",
+        "rol": "camper"
     }
 ]

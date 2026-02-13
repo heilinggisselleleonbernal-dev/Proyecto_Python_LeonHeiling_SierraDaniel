@@ -1,12 +1,26 @@
 [
-{
-    "identificacion": "1096702399",
-    "nombres":"heiling",
-    "apellidos":"leon",
-    "direccion":"calle 200",
-    "acudiente":"euclides",
-    "telefono":"3107954197",
-    "estado":"inscrito",
-    "riesgo":"bajo"
-}
+    {
+        "identificacion": "1096702399",
+        "nombres": "heiling",
+        "apellidos": "leon",
+        "direccion": "calle 200",
+        "acudiente": "euclides",
+        "telefono": "3107954197",
+        "correo": "heiling@gmail.com",
+        "password": "1234",
+        "estado": "inscrito",
+        "riesgo": "bajo"
+    },
+    {
+        "identificacion": "10230",
+        "nombres": "sebastian",
+        "apellidos": "feo",
+        "direccion": "giron",
+        "acudiente": "pedro",
+        "telefono": "329310332",
+        "correo": "sebastianfeo@gmail.com",
+        "password": "1234",
+        "estado": "Proceso de Ingreso",
+        "riesgo": "ninguno"
+    }
 ]
