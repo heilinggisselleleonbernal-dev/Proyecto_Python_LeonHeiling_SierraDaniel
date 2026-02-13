@@ -1,7 +1,12 @@
 [
     {
-        "correo":"coordinador@gmail.com",
+        "correo": "coordinador@gmail.com",
         "password": "1234",
         "rol": "coordinador"
+    },
+    {
+        "correo": "danielsierra@gmail.com",
+        "password": "1234",
+        "rol": "camper"
     }
 ]

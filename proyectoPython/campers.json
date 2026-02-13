@@ -1,12 +1,26 @@
-[
 {
-    "identificacion": "1096702399",
-    "nombres":"heiling",
-    "apellidos":"leon",
-    "direccion":"calle 200",
-    "acudiente":"euclides",
-    "telefono":"3107954197",
-    "estado":"inscrito",
-    "riesgo":"bajo"
+    "lista_Campers": [
+        {
+            "identificacion": "1096702399",
+            "nombres": "heiling",
+            "apellidos": "leon",
+            "direccion": "calle 200",
+            "acudiente": "euclides",
+            "telefono": "3107954197",
+            "estado": "inscrito",
+            "riesgo": "bajo"
+        },
+        {
+            "identificacion": "1097498805",
+            "nombres": "daniel",
+            "apellidos": "sierra",
+            "direccion": "calle 87",
+            "acudiente": "juan",
+            "telefono": "3194428839",
+            "correo": "danielsierra@gmail.com",
+            "password": "1234",
+            "estado": "Proceso de Ingreso",
+            "riesgo": "ninguno"
+        }
+    ]
 }
-]
