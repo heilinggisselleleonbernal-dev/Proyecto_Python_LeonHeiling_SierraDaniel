@@ -4,7 +4,10 @@
         "apellido": "Gomez",
         "correo": "pedro@gmail.com",
         "password": "1234",
-        "especialidad": [
+        "grupo":[],
+        "horaInicio": "06:00",
+        "horaFin": "18:00",
+        "especialidad":[
             "java",
             "node.js"
         ]
@@ -14,6 +17,9 @@
         "apellido": "Pardo",
         "correo": "jolhber@gmail.com",
         "password": "1234",
+        "grupo":[],
+        "horaInicio": "06:00",
+        "horaFin": "14:00",
         "especialidad": [
             "java",
             "netcore"
@@ -24,6 +30,9 @@
         "apellido": "Diaz",
         "correo": "cristian@gmail.com",
         "password": "1234",
+        "grupo":[],
+        "horaInicio": "10:00",
+        "horaFin": "18:00",
         "especialidad": [
             "java",
             "node.js"
@@ -34,6 +43,9 @@
         "apellido": "Dominguez",
         "correo": "kevin@gmail.com",
         "password": "1234",
+        "horaInicio": "06:00",
+        "horaFin": "14:00",
+        "grupo":[],
         "especialidad": [
             "java"
         ]
@@ -43,6 +55,9 @@
         "apellido": "Rueda",
         "correo": "carlos@gmail.com",
         "password": "1234",
+        "horaInicio": "14:00",
+        "horaFin": "22:00",
+        "grupo":[],
         "especialidad": [
             "java"
         ]
@@ -52,6 +67,9 @@
         "apellido": "Santos",
         "correo": "edwin@gmail.com",
         "password": "1234",
+        "horaInicio": "06:00",
+        "horaFin": "18:00",
+        "grupo":[],
         "especialidad": [
             "java",
             "netcore"

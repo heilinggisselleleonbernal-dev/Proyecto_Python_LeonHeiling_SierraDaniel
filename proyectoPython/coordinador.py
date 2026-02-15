@@ -1,14 +1,15 @@
 
 import json
 import os
+from crear_Grupos import crear_grupos
 def menu_Coordinador():
     while True:
         print("1.gestiona campers")
         print("2.gestiona trainers")
         print("3.aprobar prueba de ingreso")
-        print("4.asignar camper a grupo")
-        print("5.listar campers por estado")
-        print("6.crear grupos")
+        print("4.crear grupos")
+        print("5.asignar camper a grupo")
+        print("6.listar campers por estado")
         print("7.asignar ruta al grupo")
         print("8.salir")
         opcion_raw = input("seleccione:")
@@ -250,24 +251,121 @@ def menu_Coordinador():
                 print("Volviendo al menú principal...")
                 break
         elif opcion == 3:
-            while True:
-                try:
-                    nota = float(input("Ingrese la nota de la prueba inicial: "))
-                    if nota < 0 or nota > 100:
-                        print("❌ Nota inválida (0 - 100)")
-
-                except ValueError:
-                    print("❌ Debe ingresar un número válido")
-                    continue
-                if nota >= 40:
-                    print("✅ Camper APROBADO")
-                    campers[("estado")] = "Aprobado"
+            ruta = os.path.join(os.path.dirname(__file__), "campers.json")
+            with open(ruta, "r", encoding="utf-8") as archivo:
+                datos = json.load(archivo)
+                campers = datos.get("lista_Campers", [])
+            id_buscar = input("Ingrese identificación del camper: ")
+            encontrado = False
+            for camper in campers:
+                if camper["identificacion"] == id_buscar:
+                    while True:
+                        try:
+                            nota = float(input("Ingrese la nota de la prueba inicial: "))
+                            if nota < 0 or nota > 100:
+                                print("❌ Nota inválida (0 - 100)")
+                                continue
+                        except ValueError:
+                            print("❌ Debe ingresar un número válido")
+                            continue
+                        if nota >= 40:
+                            print("✅ Camper APROBADO")
+                            camper["estado"] = "Aprobado"
+                            break
+                        else:
+                            print("❌ Nota insuficiente → Debe repetir la prueba")
+                            camper["estado"] = "Proceso de Ingreso"
+                            break
+                    encontrado = True
                     break
+            if encontrado:
+                with open(ruta, "w", encoding="utf-8") as archivo:
+                    json.dump(datos, archivo, indent=4)
+            else:
+                print("❌ Camper no encontrado")
+        elif opcion == 4:   
+            crear_grupos()
+        elif opcion == 5:
+            ruta = os.path.join(os.path.dirname(__file__), "campers.json")
+            try:
+                with open(ruta, "r", encoding="utf-8") as archivo:
+                    datos = json.load(archivo)
+                campers = datos.get("lista_Campers", [])
+                if not campers:
+                    print("No hay campers registrados")
+                    return
+                id_buscar = input("Ingrese ID del camper: ")
+                grupo_nuevo = input("Ingrese grupo a asignar: ")
+                encontrado = False
+                for camper in campers:
+                    if camper["identificacion"] == id_buscar:
+                        camper["grupo"] = grupo_nuevo
+                        encontrado = True
+                        break
+                if not encontrado:
+                    print("Camper no encontrado ❌")
+                    return
+                with open(ruta, "w", encoding="utf-8") as archivo:
+                    json.dump(datos, archivo, indent=4)
+                print("Grupo asignado correctamente ✅")
+            except FileNotFoundError:
+                print("No existe campers.json ❌")
+            except json.JSONDecodeError:
+                print("JSON dañado ❌")
+        elif opcion == 6:
+            ruta = os.path.join(os.path.dirname(__file__), "campers.json")
+            try:
+                with open(ruta, "r", encoding="utf-8") as archivo:
+                    datos = json.load(archivo)
+                campers = datos.get("lista_Campers", [])
+                if not campers:
+                    print("No hay campers registrados")
                 else:
-                    print("❌ Nota insuficiente → Debe repetir la prueba")
-        elif opcion == 4:
-            print("__")
-
+                    estado = input("Ingrese el estado a filtrar: ")
+                    encontrados = [c for c in campers if c.get("estado") == estado]
+                    if not encontrados:
+                        print(f"No hay campers con estado '{estado}'")
+                    else:
+                        for camper in encontrados:
+                            print("ID:", camper["identificacion"])
+                            print("Nombre:", camper["nombres"], camper["apellidos"])
+                            print("Estado:", camper["estado"])
+                            print("---")
+            except FileNotFoundError:
+                print("No existe campers.json ❌")
+            except json.JSONDecodeError:
+                print("JSON dañado ❌")
+        elif opcion == 7:
+            ruta = os.path.join(os.path.dirname(__file__), "grupos.json")
+            try:
+                with open(ruta, "r", encoding="utf-8") as archivo:
+                    grupos = json.load(archivo)
+                if not grupos:
+                    print("No hay grupos registrados")
+                    return
+                id_grupo = input("Ingrese ID del grupo: ")
+                nueva_ruta = input("Ingrese nueva ruta: ")
+                encontrado = False
+                for grupo in grupos:
+                    if grupo.get("idGrupo") == id_grupo:
+                        grupo["ruta"] = nueva_ruta
+                        encontrado = True
+                        break
+                if not encontrado:
+                    print("Grupo no encontrado ❌")
+                    return
+                with open(ruta, "w", encoding="utf-8") as archivo:
+                    json.dump(grupos, archivo, indent=4)
+                print("Ruta asignada correctamente ✅")
+            except FileNotFoundError:
+                print("No existe grupos.json ❌")
+            except json.JSONDecodeError:
+                print("JSON dañado ❌")
+        elif opcion == 8:
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción inválida, intente nuevamente.")
 
     
                 

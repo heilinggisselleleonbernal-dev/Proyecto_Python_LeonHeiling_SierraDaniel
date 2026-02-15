@@ -4,6 +4,7 @@ from coordinador import menu_Coordinador
 from inscripcion import proceso_inscripcion
 from menuCamper import menuCamper
 from menuTrainer import menuTrainer
+from crear_Grupos import crear_grupos
 
 def cargar_Usuarios():
     ruta = os.path.join(os.path.dirname(__file__), "cuentas.json")
@@ -46,4 +47,5 @@ while True:
     
     elif opcion == 2:
         proceso_inscripcion()
+        
 
