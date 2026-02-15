@@ -1,48 +1,60 @@
-[
+{"lista_Trainers": [
     {
-    "nombre":"Pedro",
-    "apellido":"Gomez",
-    "especialidad":[
-        "java",
-        "node.js"
-    ]
-},
-{
-    "nombre":"Jolhber",
-    "apellido":"Pardo",
-    "especialidad":[
-        "java",
-        "netcore"
-    ]
-},
-{
-    "nombre":"Cristian",
-    "apellido":"Diaz",
-    "especialidad":[
-        "java",
-        "node.js"
-    ]
-},
-{
-    "nombre":"Kevin",
-    "apellido":"Dominguez",
-    "especialidad":[
-        "java"
-    ]
-},
-{
-    "nombre":"Carlos",
-    "apellido":"Rueda",
-    "especialidad":[
-        "java"
-    ]
-},
-{
-    "nombre":"Edwin",
-    "apellido":"Santos",
-    "especialidad":[
-        "java",
-        "netcore"
-    ]
-}
-]
+        "nombre": "Pedro",
+        "apellido": "Gomez",
+        "correo": "pedro@gmail.com",
+        "password": "1234",
+        "especialidad": [
+            "java",
+            "node.js"
+        ]
+    },
+    {
+        "nombre": "Jolhber",
+        "apellido": "Pardo",
+        "correo": "jolhber@gmail.com",
+        "password": "1234",
+        "especialidad": [
+            "java",
+            "netcore"
+        ]
+    },
+    {
+        "nombre": "Cristian",
+        "apellido": "Diaz",
+        "correo": "cristian@gmail.com",
+        "password": "1234",
+        "especialidad": [
+            "java",
+            "node.js"
+        ]
+    },
+    {
+        "nombre": "Kevin",
+        "apellido": "Dominguez",
+        "correo": "kevin@gmail.com",
+        "password": "1234",
+        "especialidad": [
+            "java"
+        ]
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "Rueda",
+        "correo": "carlos@gmail.com",
+        "password": "1234",
+        "especialidad": [
+            "java"
+        ]
+    },
+    {
+        "nombre": "Edwin",
+        "apellido": "Santos",
+        "correo": "edwin@gmail.com",
+        "password": "1234",
+        "especialidad": [
+            "java",
+            "netcore"
+        ]
+    }
+    ]}  

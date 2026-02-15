@@ -7,7 +7,7 @@
             "direccion": "calle 200",
             "acudiente": "euclides",
             "telefono": "3107954197",
-            "estado": "inscrito",
+            "estado": "activo",
             "riesgo": "bajo"
         },
         {
@@ -19,6 +19,18 @@
             "telefono": "3194428839",
             "correo": "danielsierra@gmail.com",
             "password": "1234",
+            "estado": "Proceso de Ingreso",
+            "riesgo": "ninguno"
+        },
+        {
+            "identificacion": "123456788",
+            "nombres": "sebastian",
+            "apellidos": "feo",
+            "direccion": "barranquilla",
+            "acudiente": "mauricio",
+            "telefono": "3214567891",
+            "correo": "sebastianfeo@gmail.com",
+            "password": "122",
             "estado": "Proceso de Ingreso",
             "riesgo": "ninguno"
         }

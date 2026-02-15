@@ -8,5 +8,41 @@
         "correo": "danielsierra@gmail.com",
         "password": "1234",
         "rol": "camper"
+    },
+    {
+        "correo": "sebastianfeo@gmail.com",
+        "password": "122",
+        "rol": "camper"
+    },
+    {
+        "correo": "pedro@gmail.com",
+        "password": "1234",
+        "rol": "trainer"
+    },
+    {
+        "correo": "jolhber@gmail.com",
+        "password": "1234",
+        "rol": "trainer"
+    },
+    {
+        "correo": "cristian@gmail.com",
+        "password": "1234",
+        "rol": "trainer"
+    },
+    {
+        "correo": "kevin@gmail.com",
+        "password": "1234",
+        "rol": "trainer"
+    },
+    {
+        "correo": "carlos@gmail.com",
+        "password": "1234",
+        "rol": "trainer"
+    },
+    {
+        "correo": "edwin@gmail.com",
+        "password": "1234",
+        "rol": "trainer"
     }
 ]
+  
