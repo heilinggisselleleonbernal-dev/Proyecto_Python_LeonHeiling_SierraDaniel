@@ -2,6 +2,8 @@ import json
 import os
 from coordinador import menu_Coordinador
 from inscripcion import proceso_inscripcion
+from menuCamper import menuCamper
+from menuTrainer import menuTrainer
 
 def cargar_Usuarios():
     ruta = os.path.join(os.path.dirname(__file__), "cuentas.json")
@@ -27,8 +29,17 @@ while True:
                 encontrado = True
                 print("haz iniciado sesion")
                 if usuario["rol"] == "coordinador":
-                   menu_Coordinador()
-                break
+                    print("bienvenido coordinador")
+                    menu_Coordinador()
+                    break
+                elif usuario["rol"] == "trainer":
+                    print("bienvenido trainer")
+                    menuTrainer()
+                    break
+                elif usuario["rol"] == "camper":
+                    print("bienvenido camper")
+                    menuCamper()
+                    break
         
         if not encontrado:
             print("el usuario no fue encontrado")

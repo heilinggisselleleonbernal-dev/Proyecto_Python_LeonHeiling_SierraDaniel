@@ -15,6 +15,7 @@ def proceso_inscripcion():
     nuevoRol="camper"
     nuevoestado="Proceso de Ingreso"
     nuevoriesgo="ninguno"
+    grupo = None
 
     base_path = os.path.dirname(__file__)
     ##Agregar informacion a camper
@@ -50,7 +51,8 @@ def proceso_inscripcion():
         "correo":nuevoCorreo,
         "password":nuevaPassword,
         "estado":nuevoestado,
-        "riesgo":nuevoriesgo
+        "riesgo":nuevoriesgo,
+        "grupo": grupo
     }    
 
     campers_list.append(nuevo_camper)

@@ -8,7 +8,8 @@
             "acudiente": "euclides",
             "telefono": "3107954197",
             "estado": "activo",
-            "riesgo": "bajo"
+            "riesgo": "bajo",
+            "grupo": null
         },
         {
             "identificacion": "1097498805",
@@ -20,7 +21,8 @@
             "correo": "danielsierra@gmail.com",
             "password": "1234",
             "estado": "Proceso de Ingreso",
-            "riesgo": "ninguno"
+            "riesgo": "ninguno",
+            "grupo": null
         },
         {
             "identificacion": "123456788",
@@ -32,7 +34,8 @@
             "correo": "sebastianfeo@gmail.com",
             "password": "122",
             "estado": "Proceso de Ingreso",
-            "riesgo": "ninguno"
+            "riesgo": "ninguno",    
+            "grupo": null  
         }
     ]
 }

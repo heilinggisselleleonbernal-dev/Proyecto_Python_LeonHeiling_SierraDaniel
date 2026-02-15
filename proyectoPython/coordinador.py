@@ -6,12 +6,11 @@ def menu_Coordinador():
         print("1.gestiona campers")
         print("2.gestiona trainers")
         print("3.aprobar prueba de ingreso")
-        print("4.asignar jornada")
-        print("5.asignar trainer a camper")
-        print("6.listar campers por estado")
-        print("7.asignar trainer a jornada")
-        print("8.asignar ruta al grupo")
-        print("9.salir")
+        print("4.asignar camper a grupo")
+        print("5.listar campers por estado")
+        print("6.crear grupos")
+        print("7.asignar ruta al grupo")
+        print("8.salir")
         opcion_raw = input("seleccione:")
         try:
             opcion = int(opcion_raw)
@@ -267,7 +266,7 @@ def menu_Coordinador():
                 else:
                     print("❌ Nota insuficiente → Debe repetir la prueba")
         elif opcion == 4:
-            print("Asignar jornada")
+            print("__")
 
 
     
