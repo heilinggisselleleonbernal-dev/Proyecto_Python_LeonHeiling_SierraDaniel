@@ -35,7 +35,7 @@ while True:
                     break
                 elif usuario["rol"] == "trainer":
                     print("bienvenido trainer")
-                    menuTrainer()
+                    menuTrainer(usuario)
                     break
                 elif usuario["rol"] == "camper":
                     print("bienvenido camper")
@@ -47,5 +47,5 @@ while True:
     
     elif opcion == 2:
         proceso_inscripcion()
-        
+
 

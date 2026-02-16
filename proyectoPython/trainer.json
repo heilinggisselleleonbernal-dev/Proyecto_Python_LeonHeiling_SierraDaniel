@@ -15,6 +15,7 @@
     {
         "nombre": "Jolhber",
         "apellido": "Pardo",
+        "id":2,
         "correo": "jolhber@gmail.com",
         "password": "1234",
         "grupo":[],
