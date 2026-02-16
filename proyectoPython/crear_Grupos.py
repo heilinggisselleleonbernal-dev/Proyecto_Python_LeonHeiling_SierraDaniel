@@ -75,6 +75,52 @@ def crear_grupos():
     elif ruta.upper() == "netcore":
         modulos.append({"nombre": "Backend NetCore", "evaluaciones": []})
 
+    # Selección manual de campers
+    with open(os.path.join(os.path.dirname(__file__), "campers.json")) as file:
+        campers_data = json.load(file)
+    campers_list = campers_data["lista_Campers"]
+    print("Campers disponibles:")
+    for i, camper in enumerate(campers_list, 1):
+        print(f"{i}. {camper['nombres']} {camper['apellidos']} (ID: {camper['identificacion']})")
+    seleccionados = input("Ingrese los números de los campers a agregar separados por coma: ")
+    seleccionados = [int(x.strip()) for x in seleccionados.split(",") if x.strip().isdigit()]
+    campers_grupo = []
+    for idx in seleccionados:
+        if 1 <= idx <= len(campers_list):
+            camper = campers_list[idx-1]
+            campers_grupo.append({
+                "identificacion": camper["identificacion"],
+                "nombre": camper["nombres"],
+                "apellidos": camper["apellidos"],
+                "correo": camper.get("correo", "")
+            })
+    # Para cada módulo, agregar evaluaciones vacías para cada camper seleccionado
+    for modulo in modulos:
+        for camper in campers_grupo:
+            modulo["evaluaciones"].append({
+                "idCamper": camper["identificacion"],
+                "actividad": "",
+                "practica": "",
+                "teorica": "",
+                "definitiva": ""
+            })
+    # Además, agregar evaluaciones vacías para todos los campers con estado 'activo' (si no están ya en la lista)
+    activos_ids = set()
+    for camper in campers_list:
+        if camper.get("estado", "").lower() == "activo":
+            activos_ids.add(camper["identificacion"])
+    # Evitar duplicados: solo agregar si no está ya en evaluaciones
+    for modulo in modulos:
+        existentes = set(ev["idCamper"] for ev in modulo["evaluaciones"])
+        for camper_id in activos_ids:
+            if camper_id not in existentes:
+                modulo["evaluaciones"].append({
+                    "idCamper": camper_id,
+                    "actividad": "",
+                    "practica": "",
+                    "teorica": "",
+                    "definitiva": ""
+                })
     nuevoGrupo = {
         "idGrupo": nombre_grupo,
         "trainerId": trainer["id"],
@@ -83,12 +129,12 @@ def crear_grupos():
         "horaInicio": horaInicio,
         "horaFin": horaFin,
         "estado": "Planeado",
-        "campers": [],
+        "campers": campers_grupo,
         "modulos": modulos
-        }       
-    grupos.append(nuevoGrupo)     
-    with open( os.path.join(os.path.dirname(__file__), "grupos.json"), "w") as file:
-        json.dump(grupos, file, indent=4)   
+    }
+    grupos.append(nuevoGrupo)
+    with open(os.path.join(os.path.dirname(__file__), "grupos.json"), "w") as file:
+        json.dump(grupos, file, indent=4)
 
     print("Grupo creado correctamente!")
     print("Nombre grupo:", nombre_grupo)

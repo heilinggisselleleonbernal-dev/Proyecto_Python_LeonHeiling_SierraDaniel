@@ -286,9 +286,10 @@ def menu_Coordinador():
         elif opcion == 4:   
             crear_grupos()
         elif opcion == 5:
-            ruta = os.path.join(os.path.dirname(__file__), "campers.json")
+            ruta_campers = os.path.join(os.path.dirname(__file__), "campers.json")
+            ruta_grupos = os.path.join(os.path.dirname(__file__), "grupos.json")
             try:
-                with open(ruta, "r", encoding="utf-8") as archivo:
+                with open(ruta_campers, "r", encoding="utf-8") as archivo:
                     datos = json.load(archivo)
                 campers = datos.get("lista_Campers", [])
                 if not campers:
@@ -297,19 +298,56 @@ def menu_Coordinador():
                 id_buscar = input("Ingrese ID del camper: ")
                 grupo_nuevo = input("Ingrese grupo a asignar: ")
                 encontrado = False
+                camper_info = None
                 for camper in campers:
                     if camper["identificacion"] == id_buscar:
                         camper["grupo"] = grupo_nuevo
+                        camper_info = camper
                         encontrado = True
                         break
                 if not encontrado:
                     print("Camper no encontrado ❌")
                     return
-                with open(ruta, "w", encoding="utf-8") as archivo:
+                # Actualizar campers.json
+                with open(ruta_campers, "w", encoding="utf-8") as archivo:
                     json.dump(datos, archivo, indent=4)
-                print("Grupo asignado correctamente ✅")
+                # Actualizar grupos.json
+                with open(ruta_grupos, "r", encoding="utf-8") as archivo:
+                    grupos = json.load(archivo)
+                grupo_encontrado = False
+                for grupo in grupos:
+                    # Puede ser 'idGrupo' o 'idgrupo' según el archivo
+                    if grupo.get("idGrupo") == grupo_nuevo or grupo.get("idgrupo") == grupo_nuevo:
+                        # Verificar si ya está en campers del grupo
+                        ya_esta = any(c["identificacion"] == id_buscar for c in grupo.get("campers", []))
+                        if not ya_esta:
+                            # Agregar a campers del grupo
+                            grupo.setdefault("campers", []).append({
+                                "identificacion": camper_info["identificacion"],
+                                "nombre": camper_info.get("nombres", ""),
+                                "apellidos": camper_info.get("apellidos", ""),
+                                "correo": camper_info.get("correo", "")
+                            })
+                            # Agregar evaluaciones vacías en cada módulo si no existe
+                            for modulo in grupo.get("modulos", []):
+                                if not any(ev.get("idCamper") == id_buscar for ev in modulo.get("evaluaciones", [])):
+                                    modulo.setdefault("evaluaciones", []).append({
+                                        "idCamper": camper_info["identificacion"],
+                                        "actividad": "",
+                                        "practica": "",
+                                        "teorica": "",
+                                        "definitiva": ""
+                                    })
+                        grupo_encontrado = True
+                        break
+                if grupo_encontrado:
+                    with open(ruta_grupos, "w", encoding="utf-8") as archivo:
+                        json.dump(grupos, archivo, indent=4)
+                    print("Grupo asignado correctamente ✅ y camper agregado al grupo.")
+                else:
+                    print("Grupo no encontrado en grupos.json ❌")
             except FileNotFoundError:
-                print("No existe campers.json ❌")
+                print("No existe campers.json o grupos.json ❌")
             except json.JSONDecodeError:
                 print("JSON dañado ❌")
         elif opcion == 6:

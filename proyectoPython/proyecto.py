@@ -17,6 +17,7 @@ def cargar_Usuarios():
         return json.load(archivo)
 
 while True:
+    print("------------Bienvenido a Campusland------------")
     print("1. inicia sesion")
     print("2. registrarse")
     opcion = int(input("seleccione una opcion: "))

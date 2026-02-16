@@ -1,102 +1,101 @@
 [
-  {
-    "idGrupo": "P2",
-    "trainer_id": 2,
-    "ruta": "Java",
-    "salon": "Sputnik",
-    "horaInicio": 10,
-    "horaFin": 14,
-    "estado": "Planeado",
-    "campers": [
-        {
-            "Identificacion": 1097498805,
-            "nombre": "Daniel Sierra",
-            "correo": "daniel.silva@correo.com"
-        }
-    ],
-    "modulos": [
-      {
-        "nombre": "Fundamentos",
-        "evaluaciones": [
-          {
-            "idCamper": null,
-            "actividad": null,
-            "practica": null,
-            "teorica": null,
-            "definitiva": null,
-            "riesgo": null,
-            "estado": null
-          }
+    {
+        "idGrupo": "P2",
+        "trainer_id": 2,
+        "ruta": "Java",
+        "salon": "Sputnik",
+        "horaInicio": 10,
+        "horaFin": 14,
+        "estado": "Planeado",
+        "campers": [
+            {
+                "identificacion": "01",
+                "nombre": "Daniel Sierra",
+                "correo": "daniel.silva@correo.com"
+            }
+        ],
+        "modulos": [
+            {
+                "nombre": "Fundamentos",
+                "evaluaciones": [
+                    {
+                        "idCamper": "01",
+                        "actividad": 40.0,
+                        "practica": 50.0,
+                        "teorica": 10.0,
+                        "definitiva": 33.333333333333336,
+                        "aprobado": true
+                    }
+                ]
+            },
+            {
+                "nombre": "Web",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Bases de Datos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Backend Java",
+                "evaluaciones": []
+            }
         ]
-      },
-      {
-        "nombre": "Web",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Bases de Datos",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Backend Java",
-        "evaluaciones": []
-      }
-    ]
-  },
-  {
-    "idGrupo": "E2",
-    "trainer_id": 1,
-    "ruta": "Java",
-    "salon": "Apolo",
-    "horaInicio": 10,
-    "horaFin": 14,
-    "estado": "Planeado",
-    "campers": [],
-    "modulos": [
-      {
-        "nombre": "Fundamentos",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Web",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Bases de Datos",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Backend Java",
-        "evaluaciones": []
-      }
-    ]
-  },
-  {
-    "idGrupo": "C1",
-    "trainerId": 6,
-    "ruta": "Java",
-    "salon": "Apolo",
-    "horaInicio": 14,
-    "horaFin": 18,
-    "estado": "Planeado",
-    "campers": [],
-    "modulos": [
-      {
-        "nombre": "Fundamentos",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Web",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Bases de Datos",
-        "evaluaciones": []
-      },
-      {
-        "nombre": "Backend Java",
-        "evaluaciones": []
-      }
-    ]
-  }
+    },
+    {
+        "idGrupo": "E2",
+        "trainer_id": 1,
+        "ruta": "Java",
+        "salon": "Apolo",
+        "horaInicio": 10,
+        "horaFin": 14,
+        "estado": "Planeado",
+        "campers": [],
+        "modulos": [
+            {
+                "nombre": "Fundamentos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Web",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Bases de Datos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Backend Java",
+                "evaluaciones": []
+            }
+        ]
+    },
+    {
+        "idGrupo": "C1",
+        "trainerId": 6,
+        "ruta": "Java",
+        "salon": "Apolo",
+        "horaInicio": 14,
+        "horaFin": 18,
+        "estado": "Planeado",
+        "campers": [],
+        "modulos": [
+            {
+                "nombre": "Fundamentos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Web",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Bases de Datos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Backend Java",
+                "evaluaciones": []
+            }
+        ]
+    }
 ]

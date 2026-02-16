@@ -9,10 +9,10 @@
             "telefono": "3107954197",
             "estado": "activo",
             "riesgo": "bajo",
-            "grupo": null
+            "grupo": "C1"
         },
         {
-            "identificacion": "1097498805",
+            "identificacion": "01",
             "nombres": "daniel",
             "apellidos": "sierra",
             "direccion": "calle 87",
@@ -22,7 +22,7 @@
             "password": "1234",
             "estado": "Proceso de Ingreso",
             "riesgo": "ninguno",
-            "grupo": null
+            "grupo": "C1"
         },
         {
             "identificacion": "123456788",
@@ -34,8 +34,8 @@
             "correo": "sebastianfeo@gmail.com",
             "password": "122",
             "estado": "Proceso de Ingreso",
-            "riesgo": "ninguno",    
-            "grupo": null  
+            "riesgo": "ninguno",
+            "grupo": null
         }
     ]
 }
