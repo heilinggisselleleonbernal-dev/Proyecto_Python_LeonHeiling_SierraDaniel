@@ -75,3 +75,7 @@ def menuCamper():
                 if camper["identificacion"] == id_camper:
                     print(f"Estado: {camper.get('estado', 'No disponible')}")
                     print(f"Riesgo: {camper.get('riesgo', 'No disponible')}")
+
+        elif opcion == "5":
+            print("Saliendo del menú...")
+            break
