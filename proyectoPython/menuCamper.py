@@ -1,9 +1,11 @@
 import json
 
 def cargar_grupos():
-    with open("grupos.json", "r", encoding="utf-8") as archivo:
-        grupos = json.load(archivo)
-    return grupos
+    try:
+        with open("grupos.json", "r", encoding="utf-8") as archivo:
+            return json.load(archivo)
+    except FileNotFoundError:
+        return []
 
 def guardar_grupos(grupos):
     with open("grupos.json", "w", encoding="utf-8") as archivo:
@@ -12,15 +14,15 @@ def guardar_grupos(grupos):
 def cargar_campers():
     try:
         with open("campers.json", "r", encoding="utf-8") as archivo:
-            campers = json.load(archivo)
+            datos = json.load(archivo)
+            return datos.get("lista_Campers", [])
     except FileNotFoundError:
-        campers = []
-    return campers
-
+        return []
 
 def guardar_campers(campers):
     with open("campers.json", "w", encoding="utf-8") as archivo:
-        json.dump(campers, archivo, indent=4, ensure_ascii=False)
+        json.dump({"lista_Campers": campers}, archivo, indent=4, ensure_ascii=False)
+
 
 def menuCamper():
     while True:

@@ -65,8 +65,10 @@ def menuTrainer(trainer):
                     print("Modulos disponibles:")
                     for i, modulo in enumerate(grupo["modulos"], 1):
                         print(f"{i}- {modulo['nombre']}")
-                    modulo_seleccionado = int(input("Seleccione el modulo a calificar: "))
-                    modulo = grupo["modulos"][modulo_seleccionado - 1]
+                    modulo_seleccionado = int(input("Seleccione el modulo a calificar: "))  
+                    if modulo_seleccionado < 1 or modulo_seleccionado > len(grupo["modulos"]):
+                        print("Modulo inválido ❌")
+                        break
                     evaluacion_existente = None
                     for ev in modulo["evaluaciones"]:
                         if ev.get("idCamper") == id_camper: 
