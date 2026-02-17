@@ -42,7 +42,7 @@ def menuTrainer(trainer):
         print("3. Ver promedios de los modulos")
         print("4. Salir")
         print("-----------------------------------------------")
-        opcion = input("Ingrese el numero de la opcion que desea: ")
+        opcion = input("Ingrese una opcion: ")
 
         if opcion == "1":
             grupos= cargar_grupos()
@@ -78,7 +78,7 @@ def menuTrainer(trainer):
                         print("El camper ya tiene una nota registrada.")
                         editar= input("¿Desea editar la nota?: ")
                         if editar.lower() != "si":
-                            print("No se editó la nota.")
+                            print("No se editó la nota.❌")
                             break
                         actividad = input(f"Actividad actual ({evaluacion_existente.get('actividad', '')}): ")
                         practica = input(f"Práctica actual ({evaluacion_existente.get('practica', '')}): ")
@@ -96,7 +96,7 @@ def menuTrainer(trainer):
                         else:
                             evaluacion_existente["definitiva"] = None
                         guardar_grupos(grupos)
-                        print("Evaluación actualizada exitosamente.")
+                        print("✅Evaluación actualizada exitosamente.")
                     else:
                         actividad = float(input("Ingrese la calificación de la actividad: "))
                         practica = float(input("Ingrese la calificación de la práctica: "))
@@ -117,7 +117,7 @@ def menuTrainer(trainer):
                         modulo["evaluaciones"].append(evaluacion)
                         print(f"Definitiva calculada: {definitiva}")
                         guardar_grupos(grupos)
-                        print("Evaluación guardada exitosamente.")
+                        print("✅Evaluación guardada exitosamente.")
                     break
 
         elif opcion == "3":
@@ -136,7 +136,7 @@ def menuTrainer(trainer):
                             print(f"Definitiva del módulo {modulo['nombre']}: {nota.get('definitiva', 'No calculada')}")
                             break
                     else:
-                        print(f"No se encontró evaluación para el camper en el módulo {modulo['nombre']}.")
+                        print(f"❌No se encontró evaluación para el camper en el módulo {modulo['nombre']}.")
                     break
 
         elif opcion == "4":

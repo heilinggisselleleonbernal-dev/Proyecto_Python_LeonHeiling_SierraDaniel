@@ -41,7 +41,7 @@ def menu_Coordinador():
                         campers = datos.get("lista_Campers", [])
 
                     if not campers:
-                        print("No hay campers registrados")
+                        print("❌No hay campers registrados")
                     else:
                         for camper in campers:
                             print("ID:", camper["identificacion"])
@@ -49,7 +49,7 @@ def menu_Coordinador():
                             print("Estado:", camper["estado"])
 
                 except FileNotFoundError:
-                    print(f"No existe el archivo de campers")
+                    print(f"❌No existe el archivo de campers")
 
             if subopcion == 2:
                 ruta = os.path.join(os.path.dirname(__file__), "campers.json")
@@ -95,7 +95,7 @@ def menu_Coordinador():
                     print("❌ Camper no encontrado")
 
             if subopcion == 3:
-                print("volviendo al menu principal")
+                print("↩ volviendo al menu principal")
                 continue 
 
         elif opcion == 2:
@@ -103,7 +103,7 @@ def menu_Coordinador():
             print("2.editar trainers")
             print("3.listar trainers")
             print("4.eliminar trainers")
-            print("5.volver")
+            print("5.↩ volver")
 
             subopcion_raw = input("seleccione una opcion: ")
             try:
@@ -242,7 +242,7 @@ def menu_Coordinador():
 
                 if not campers:
                     print("No hay campers registrados")
-                    continue 
+                    continue   # ✅ FIX (ANTES RETURN)
 
                 id_buscar = input("Ingrese ID del camper: ")
                 grupo_nuevo = input("Ingrese grupo a asignar: ")
@@ -305,14 +305,14 @@ def menu_Coordinador():
                 campers = datos.get("lista_Campers", [])
 
                 if not campers:
-                    print("No hay campers registrados")
+                    print("❌No hay campers registrados")
                 else:
                     estado = input("Ingrese el estado a filtrar: ")
 
                     encontrados = [c for c in campers if c.get("estado") == estado]
 
                     if not encontrados:
-                        print(f"No hay campers con estado '{estado}'")
+                        print(f"❌No hay campers con estado '{estado}'")
                     else:
                         for camper in encontrados:
                             print("ID:", camper["identificacion"])
@@ -321,7 +321,7 @@ def menu_Coordinador():
                             print("---")
 
             except FileNotFoundError:
-                print("No existe campers.json ❌")
+                print("❌No existe campers.json")
 
         elif opcion == 7:
             ruta = os.path.join(os.path.dirname(__file__), "grupos.json")
@@ -331,8 +331,8 @@ def menu_Coordinador():
                     grupos = json.load(archivo)
 
                 if not grupos:
-                    print("No hay grupos registrados")
-                    continue   
+                    print("❌No hay grupos registrados")
+                    continue   # ✅ FIX
 
                 id_grupo = input("Ingrese ID del grupo: ")
                 nueva_ruta = input("Ingrese nueva ruta: ")

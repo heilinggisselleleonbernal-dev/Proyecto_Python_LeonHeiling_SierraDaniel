@@ -28,13 +28,13 @@ def menuCamper():
     while True:
         print("-----------------------------------------------")
         print("Que es lo que quieres hacer?")
-        print("1. Visualizar tus datos personales")
+        print("1. ver datos personales")
         print("2. ver grupos asignados y sus campers")
-        print("3. ver sus notas de cada modulo")
+        print("3. ver notas de cada modulo")
         print("4. Revisar Estado")
         print("5. Salir")
         print("-----------------------------------------------")
-        opcion = input("Ingrese el numero de la opcion que desea: ")
+        opcion = input("Ingrese una opcion: ")
 
         if opcion == "1":
             campers = cargar_campers()

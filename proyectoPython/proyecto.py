@@ -18,33 +18,33 @@ def cargar_Usuarios():
 
 while True:
     print("------------Bienvenido a Campusland------------")
-    print("1. inicia sesion")
-    print("2. registrarse")
-    opcion = int(input("seleccione una opcion: "))
+    print("1. 🔑 inicia sesion")
+    print("2. 📝 registrarse")
+    opcion = int(input(" seleccione una opcion: "))
     if opcion == 1:
         usuarios =  cargar_Usuarios()
-        correo= input ("ingrese su correo: ")
-        password=input("ingrese su contraseña: ")
+        correo= input ("➡ingrese su correo: ")
+        password=input("➡ingrese su contraseña: ")
         encontrado= False
         for usuario in usuarios:
             if usuario["correo"] == correo and usuario["password"] == password:
                 encontrado = True
-                print("haz iniciado sesion")
+                print("✔ has iniciado sesion")
                 if usuario["rol"] == "coordinador":
-                    print("bienvenido coordinador")
+                    print("👋bienvenido coordinador")
                     menu_Coordinador()
                     break
                 elif usuario["rol"] == "trainer":
-                    print("bienvenido trainer")
+                    print("👋bienvenido trainer")
                     menuTrainer(usuario)
                     break
                 elif usuario["rol"] == "camper":
-                    print("bienvenido camper")
+                    print("👋bienvenido camper")
                     menuCamper()
                     break
         
         if not encontrado:
-            print("el usuario no fue encontrado")
+            print("❌el usuario no fue encontrado")
     
     elif opcion == 2:
         proceso_inscripcion()
