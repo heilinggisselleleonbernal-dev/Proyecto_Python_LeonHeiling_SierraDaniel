@@ -1,12 +1,16 @@
+
 import json
+import os
 
 def cargar_grupos():
-    with open("grupos.json", "r", encoding="utf-8") as archivo:
+    ruta = os.path.join(os.path.dirname(__file__), "Grupos.json")
+    with open(ruta, "r", encoding="utf-8") as archivo:
         grupos = json.load(archivo)
     return grupos
 
 def guardar_grupos(grupos):
-    with open("grupos.json", "w", encoding="utf-8") as archivo:
+    ruta = os.path.join(os.path.dirname(__file__), "Grupos.json")
+    with open(ruta, "w", encoding="utf-8") as archivo:
         json.dump(grupos, archivo, indent=4, ensure_ascii=False)
 
 def cargar_campers():
@@ -22,17 +26,18 @@ def guardar_campers(campers):
         json.dump(campers, archivo, indent=4, ensure_ascii=False)
 
 def menuTrainer(trainer):
-    trainer_id = None
-    try:
-        with open("trainer.json", "r", encoding="utf-8") as archivo:
-            trainers_data = json.load(archivo)
-            trainers_list = trainers_data.get("lista_Trainers", [])
-            for t in trainers_list:
-                if t.get("correo") == trainer.get("correo"):
-                    trainer_id = t.get("id")
-                    break
-    except Exception:
-        pass
+    trainer_id = trainer.get("id")
+    if trainer_id is None:
+        try:
+            with open("trainer.json", "r", encoding="utf-8") as archivo:
+                trainers_data = json.load(archivo)
+                trainers_list = trainers_data.get("lista_Trainers", [])
+                for t in trainers_list:
+                    if t.get("correo") == trainer.get("correo"):
+                        trainer_id = t.get("id")
+                        break
+        except Exception:
+            pass
 
     while True:
         print("-----------------------------------------------")
@@ -45,16 +50,21 @@ def menuTrainer(trainer):
         opcion = input("Ingrese una opcion: ")
 
         if opcion == "1":
-            grupos= cargar_grupos()
+            grupos = cargar_grupos()
             print("Grupos asignados:")
-            for grupo in grupos:
-                if ("trainer_id" in grupo and grupo["trainer_id"] == trainer_id) or ("trainerId" in grupo and grupo["trainerId"] == trainer_id):
-                    print(f"Grupo: {grupo['idGrupo']}, Ruta: {grupo['ruta']}, Salon: {grupo['salon']}")
+            grupos_asignados = [grupo for grupo in grupos if ("trainer_id" in grupo and grupo["trainer_id"] == trainer_id) or ("trainerId" in grupo and grupo["trainerId"] == trainer_id)]
+            if not grupos_asignados:
+                print("No tienes grupos asignados.")
+            for grupo in grupos_asignados:
+                print(f"Grupo: {grupo['idGrupo']}, Ruta: {grupo['ruta']}, Salon: {grupo['salon']}")
+                if grupo["campers"]:
                     print("Campers asignados:")
                     for camper in grupo["campers"]:
-                        nombre = camper.get("nombres") or camper.get("nombre") or ""
+                        nombre = camper.get("nombre") or camper.get("nombres") or ""
                         apellidos = camper.get("apellidos") or camper.get("apellido") or ""
                         print(f"- {nombre}, {apellidos}")
+                else:
+                    print("No hay campers asignados a este grupo.")
         
         elif opcion == "2":
             grupos = cargar_grupos()

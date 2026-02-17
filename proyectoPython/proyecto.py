@@ -36,6 +36,16 @@ while True:
                     break
                 elif usuario["rol"] == "trainer":
                     print("👋bienvenido trainer")
+                    try:
+                        with open(os.path.join(os.path.dirname(__file__), "trainer.json"), "r", encoding="utf-8") as archivo:
+                            trainers_data = json.load(archivo)
+                            trainers_list = trainers_data.get("lista_Trainers", [])
+                            for t in trainers_list:
+                                if t.get("correo") == usuario.get("correo"):
+                                    usuario["id"] = t.get("id")
+                                    break
+                    except Exception:
+                        pass
                     menuTrainer(usuario)
                     break
                 elif usuario["rol"] == "camper":

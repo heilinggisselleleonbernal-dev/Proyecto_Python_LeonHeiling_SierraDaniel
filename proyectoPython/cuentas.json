@@ -43,6 +43,151 @@
         "correo": "edwin@gmail.com",
         "password": "1234",
         "rol": "trainer"
-    }
+    },
+    { 
+    "correo": "daniel.sierra@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "laura.martinez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "andres.gomez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "camila.vargas@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "mateo.castro@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "sofia.ramirez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "juan.torres@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "valentina.lopez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "sebastian.diaz@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "isabella.morales@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "heiling.leon@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "kevin.ramirez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "natalia.suarez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "david.mendoza@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "paula.jimenez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "miguel.castro@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+}, 
+  {
+    "correo": "julian.herrera@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "mariana.rojas@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "cristian.gomez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "valeria.perez@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "samuel.ortega@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "gabriela.silva@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "esteban.lozano@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "daniela.cruz@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "tomas.reyes@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "lucia.molina@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  {
+    "correo": "nicolas.navarro@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "camilo.vera@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+},
+  { 
+    "correo": "alejandra.quintero@correo.com", 
+    "password": "123456", 
+    "rol": "camper" 
+}
 ]
   

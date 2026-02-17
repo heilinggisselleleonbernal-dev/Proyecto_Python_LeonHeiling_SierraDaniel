@@ -1,5 +1,6 @@
 {"lista_Trainers": [
     {
+        "id": 1,
         "nombre": "Pedro",
         "apellido": "Gomez",
         "correo": "pedro@gmail.com",
@@ -13,9 +14,9 @@
         ]
     },
     {
+        "id": 2,
         "nombre": "Jolhber",
         "apellido": "Pardo",
-        "id":2,
         "correo": "jolhber@gmail.com",
         "password": "1234",
         "grupo":[],
@@ -27,6 +28,7 @@
         ]
     },
     {
+        "id": 3,
         "nombre": "Cristian",
         "apellido": "Diaz",
         "correo": "cristian@gmail.com",
@@ -40,6 +42,7 @@
         ]
     },
     {
+        "id": 4,
         "nombre": "Kevin",
         "apellido": "Dominguez",
         "correo": "kevin@gmail.com",
@@ -52,6 +55,7 @@
         ]
     },
     {
+        "id": 5,
         "nombre": "Carlos",
         "apellido": "Rueda",
         "correo": "carlos@gmail.com",
@@ -64,6 +68,7 @@
         ]
     },
     {
+        "id": 6,
         "nombre": "Edwin",
         "apellido": "Santos",
         "correo": "edwin@gmail.com",
