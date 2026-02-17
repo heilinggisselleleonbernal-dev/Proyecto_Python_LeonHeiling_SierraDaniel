@@ -1,83 +1,239 @@
 [
-  {
-    "idGrupo": "J1",
-    "trainer_id": 1,
-    "ruta": "Java",
-    "salon": "Sputnik",
-    "horaInicio": 8,
-    "horaFin": 12,
-    "estado": "Planeado",
-    "campers": [
-      { "identificacion": "201", "nombre": "Daniel Sierra", "correo": "daniel.sierra@correo.com" },
-      { "identificacion": "202", "nombre": "Laura Martinez", "correo": "laura.martinez@correo.com" },
-      { "identificacion": "203", "nombre": "Andres Gomez", "correo": "andres.gomez@correo.com" },
-      { "identificacion": "204", "nombre": "Camila Vargas", "correo": "camila.vargas@correo.com" },
-      { "identificacion": "205", "nombre": "Mateo Castro", "correo": "mateo.castro@correo.com" },
-      { "identificacion": "206", "nombre": "Sofia Ramirez", "correo": "sofia.ramirez@correo.com" },
-      { "identificacion": "207", "nombre": "Juan Torres", "correo": "juan.torres@correo.com" },
-      { "identificacion": "208", "nombre": "Valentina Lopez", "correo": "valentina.lopez@correo.com" },
-      { "identificacion": "209", "nombre": "Sebastian Diaz", "correo": "sebastian.diaz@correo.com" },
-      { "identificacion": "210", "nombre": "Isabella Morales", "correo": "isabella.morales@correo.com" }
-    ],
-    "modulos": [
-      { "nombre": "Fundamentos", "evaluaciones": [] },
-      { "nombre": "Web", "evaluaciones": [] },
-      { "nombre": "Bases de Datos", "evaluaciones": [] },
-      { "nombre": "Backend Java", "evaluaciones": [] }
-    ]
-  },
-  {
-    "idGrupo": "P1",
-    "trainer_id": 2,
-    "ruta": "Java",
-    "salon": "Apollo",
-    "horaInicio": 10,
-    "horaFin": 14,
-    "estado": "Planeado",
-    "campers": [
-      { "identificacion": "301", "nombre": "Heiling Leon", "correo": "heiling.leon@correo.com" },
-      { "identificacion": "302", "nombre": "Kevin Ramirez", "correo": "kevin.ramirez@correo.com" },
-      { "identificacion": "303", "nombre": "Natalia Suarez", "correo": "natalia.suarez@correo.com" },
-      { "identificacion": "304", "nombre": "David Mendoza", "correo": "david.mendoza@correo.com" },
-      { "identificacion": "305", "nombre": "Paula Jimenez", "correo": "paula.jimenez@correo.com" },
-      { "identificacion": "306", "nombre": "Miguel Castro", "correo": "miguel.castro@correo.com" },
-      { "identificacion": "307", "nombre": "Sara Vargas", "correo": "sara.vargas@correo.com" },
-      { "identificacion": "308", "nombre": "Julian Herrera", "correo": "julian.herrera@correo.com" },
-      { "identificacion": "309", "nombre": "Mariana Rojas", "correo": "mariana.rojas@correo.com" },
-      { "identificacion": "310", "nombre": "Cristian Gomez", "correo": "cristian.gomez@correo.com" }
-    ],
-    "modulos": [
-      { "nombre": "Fundamentos", "evaluaciones": [] },
-      { "nombre": "Web", "evaluaciones": [] },
-      { "nombre": "Bases de Datos", "evaluaciones": [] },
-      { "nombre": "Backend Java", "evaluaciones": [] }
-    ]
-  },
-  {
-    "idGrupo": "E2",
-    "trainer_id": 3,
-    "ruta": "Java",
-    "salon": "Orion",
-    "horaInicio": 14,
-    "horaFin": 18,
-    "estado": "Planeado",
-    "campers": [
-      { "identificacion": "401", "nombre": "Valeria Perez", "correo": "valeria.perez@correo.com" },
-      { "identificacion": "402", "nombre": "Samuel Ortega", "correo": "samuel.ortega@correo.com" },
-      { "identificacion": "403", "nombre": "Gabriela Silva", "correo": "gabriela.silva@correo.com" },
-      { "identificacion": "404", "nombre": "Esteban Lozano", "correo": "esteban.lozano@correo.com" },
-      { "identificacion": "405", "nombre": "Daniela Cruz", "correo": "daniela.cruz@correo.com" },
-      { "identificacion": "406", "nombre": "Tomas Reyes", "correo": "tomas.reyes@correo.com" },
-      { "identificacion": "407", "nombre": "Lucia Molina", "correo": "lucia.molina@correo.com" },
-      { "identificacion": "408", "nombre": "Nicolas Navarro", "correo": "nicolas.navarro@correo.com" },
-      { "identificacion": "409", "nombre": "Camilo Vera", "correo": "camilo.vera@correo.com" },
-      { "identificacion": "410", "nombre": "Alejandra Quintero", "correo": "alejandra.quintero@correo.com" }
-    ],
-    "modulos": [
-      { "nombre": "Fundamentos", "evaluaciones": [] },
-      { "nombre": "Web", "evaluaciones": [] },
-      { "nombre": "Bases de Datos", "evaluaciones": [] },
-      { "nombre": "Backend Java", "evaluaciones": [] }
-    ]
-  }
+    {
+        "idGrupo": "J1",
+        "trainer_id": 1,
+        "ruta": "python",
+        "salon": "Sputnik",
+        "horaInicio": 8,
+        "horaFin": 12,
+        "estado": "Planeado",
+        "campers": [
+            {
+                "identificacion": "201",
+                "nombre": "Daniel Sierra",
+                "correo": "daniel.sierra@correo.com"
+            },
+            {
+                "identificacion": "202",
+                "nombre": "Laura Martinez",
+                "correo": "laura.martinez@correo.com"
+            },
+            {
+                "identificacion": "203",
+                "nombre": "Andres Gomez",
+                "correo": "andres.gomez@correo.com"
+            },
+            {
+                "identificacion": "204",
+                "nombre": "Camila Vargas",
+                "correo": "camila.vargas@correo.com"
+            },
+            {
+                "identificacion": "205",
+                "nombre": "Mateo Castro",
+                "correo": "mateo.castro@correo.com"
+            },
+            {
+                "identificacion": "206",
+                "nombre": "Sofia Ramirez",
+                "correo": "sofia.ramirez@correo.com"
+            },
+            {
+                "identificacion": "207",
+                "nombre": "Juan Torres",
+                "correo": "juan.torres@correo.com"
+            },
+            {
+                "identificacion": "208",
+                "nombre": "Valentina Lopez",
+                "correo": "valentina.lopez@correo.com"
+            },
+            {
+                "identificacion": "209",
+                "nombre": "Sebastian Diaz",
+                "correo": "sebastian.diaz@correo.com"
+            },
+            {
+                "identificacion": "210",
+                "nombre": "Isabella Morales",
+                "correo": "isabella.morales@correo.com"
+            }
+        ],
+        "modulos": [
+            {
+                "nombre": "Fundamentos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Web",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Bases de Datos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Backend Java",
+                "evaluaciones": []
+            }
+        ]
+    },
+    {
+        "idGrupo": "P1",
+        "trainer_id": 2,
+        "ruta": "Java",
+        "salon": "Apollo",
+        "horaInicio": 10,
+        "horaFin": 14,
+        "estado": "Planeado",
+        "campers": [
+            {
+                "identificacion": "301",
+                "nombre": "Heiling Leon",
+                "correo": "heiling.leon@correo.com"
+            },
+            {
+                "identificacion": "302",
+                "nombre": "Kevin Ramirez",
+                "correo": "kevin.ramirez@correo.com"
+            },
+            {
+                "identificacion": "303",
+                "nombre": "Natalia Suarez",
+                "correo": "natalia.suarez@correo.com"
+            },
+            {
+                "identificacion": "304",
+                "nombre": "David Mendoza",
+                "correo": "david.mendoza@correo.com"
+            },
+            {
+                "identificacion": "305",
+                "nombre": "Paula Jimenez",
+                "correo": "paula.jimenez@correo.com"
+            },
+            {
+                "identificacion": "306",
+                "nombre": "Miguel Castro",
+                "correo": "miguel.castro@correo.com"
+            },
+            {
+                "identificacion": "307",
+                "nombre": "Sara Vargas",
+                "correo": "sara.vargas@correo.com"
+            },
+            {
+                "identificacion": "308",
+                "nombre": "Julian Herrera",
+                "correo": "julian.herrera@correo.com"
+            },
+            {
+                "identificacion": "309",
+                "nombre": "Mariana Rojas",
+                "correo": "mariana.rojas@correo.com"
+            },
+            {
+                "identificacion": "310",
+                "nombre": "Cristian Gomez",
+                "correo": "cristian.gomez@correo.com"
+            }
+        ],
+        "modulos": [
+            {
+                "nombre": "Fundamentos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Web",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Bases de Datos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Backend Java",
+                "evaluaciones": []
+            }
+        ]
+    },
+    {
+        "idGrupo": "E2",
+        "trainer_id": 3,
+        "ruta": "Java",
+        "salon": "Orion",
+        "horaInicio": 14,
+        "horaFin": 18,
+        "estado": "Planeado",
+        "campers": [
+            {
+                "identificacion": "401",
+                "nombre": "Valeria Perez",
+                "correo": "valeria.perez@correo.com"
+            },
+            {
+                "identificacion": "402",
+                "nombre": "Samuel Ortega",
+                "correo": "samuel.ortega@correo.com"
+            },
+            {
+                "identificacion": "403",
+                "nombre": "Gabriela Silva",
+                "correo": "gabriela.silva@correo.com"
+            },
+            {
+                "identificacion": "404",
+                "nombre": "Esteban Lozano",
+                "correo": "esteban.lozano@correo.com"
+            },
+            {
+                "identificacion": "405",
+                "nombre": "Daniela Cruz",
+                "correo": "daniela.cruz@correo.com"
+            },
+            {
+                "identificacion": "406",
+                "nombre": "Tomas Reyes",
+                "correo": "tomas.reyes@correo.com"
+            },
+            {
+                "identificacion": "407",
+                "nombre": "Lucia Molina",
+                "correo": "lucia.molina@correo.com"
+            },
+            {
+                "identificacion": "408",
+                "nombre": "Nicolas Navarro",
+                "correo": "nicolas.navarro@correo.com"
+            },
+            {
+                "identificacion": "409",
+                "nombre": "Camilo Vera",
+                "correo": "camilo.vera@correo.com"
+            },
+            {
+                "identificacion": "410",
+                "nombre": "Alejandra Quintero",
+                "correo": "alejandra.quintero@correo.com"
+            }
+        ],
+        "modulos": [
+            {
+                "nombre": "Fundamentos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Web",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Bases de Datos",
+                "evaluaciones": []
+            },
+            {
+                "nombre": "Backend Java",
+                "evaluaciones": []
+            }
+        ]
+    }
 ]

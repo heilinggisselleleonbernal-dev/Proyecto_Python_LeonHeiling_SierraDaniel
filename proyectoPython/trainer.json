@@ -1,84 +1,86 @@
-{"lista_Trainers": [
-    {
-        "id": 1,
-        "nombre": "Pedro",
-        "apellido": "Gomez",
-        "correo": "pedro@gmail.com",
-        "password": "1234",
-        "grupo":[],
-        "horaInicio": "06:00",
-        "horaFin": "18:00",
-        "especialidad":[
-            "java",
-            "node.js"
-        ]
-    },
-    {
-        "id": 2,
-        "nombre": "Jolhber",
-        "apellido": "Pardo",
-        "correo": "jolhber@gmail.com",
-        "password": "1234",
-        "grupo":[],
-        "horaInicio": "06:00",
-        "horaFin": "14:00",
-        "especialidad": [
-            "java",
-            "netcore"
-        ]
-    },
-    {
-        "id": 3,
-        "nombre": "Cristian",
-        "apellido": "Diaz",
-        "correo": "cristian@gmail.com",
-        "password": "1234",
-        "grupo":[],
-        "horaInicio": "10:00",
-        "horaFin": "18:00",
-        "especialidad": [
-            "java",
-            "node.js"
-        ]
-    },
-    {
-        "id": 4,
-        "nombre": "Kevin",
-        "apellido": "Dominguez",
-        "correo": "kevin@gmail.com",
-        "password": "1234",
-        "horaInicio": "06:00",
-        "horaFin": "14:00",
-        "grupo":[],
-        "especialidad": [
-            "java"
-        ]
-    },
-    {
-        "id": 5,
-        "nombre": "Carlos",
-        "apellido": "Rueda",
-        "correo": "carlos@gmail.com",
-        "password": "1234",
-        "horaInicio": "14:00",
-        "horaFin": "22:00",
-        "grupo":[],
-        "especialidad": [
-            "java"
-        ]
-    },
-    {
-        "id": 6,
-        "nombre": "Edwin",
-        "apellido": "Santos",
-        "correo": "edwin@gmail.com",
-        "password": "1234",
-        "horaInicio": "06:00",
-        "horaFin": "18:00",
-        "grupo":[],
-        "especialidad": [
-            "java",
-            "netcore"
-        ]
-    }
-    ]}  
+{
+    "lista_Trainers": [
+        {
+            "id": 1,
+            "nombre": "Pedro",
+            "apellido": "Gomez",
+            "correo": "pedro@gmail.com",
+            "password": "1234",
+            "grupo": [],
+            "horaInicio": "06:00",
+            "horaFin": "18:00",
+            "especialidad": [
+                "java",
+                "node.js"
+            ]
+        },
+        {
+            "id": 2,
+            "nombre": "Jolhber",
+            "apellido": "Pardo",
+            "correo": "jolhber@gmail.com",
+            "password": "1234",
+            "grupo": [],
+            "horaInicio": "06:00",
+            "horaFin": "14:00",
+            "especialidad": [
+                "java",
+                "netcore"
+            ]
+        },
+        {
+            "id": 3,
+            "nombre": "Cristian",
+            "apellido": "Diaz",
+            "correo": "cristian@gmail.com",
+            "password": "1234",
+            "grupo": [],
+            "horaInicio": "10:00",
+            "horaFin": "18:00",
+            "especialidad": [
+                "java",
+                "node.js"
+            ]
+        },
+        {
+            "id": 4,
+            "nombre": "Kevin",
+            "apellido": "Dominguez",
+            "correo": "kevin@gmail.com",
+            "password": "1234",
+            "horaInicio": "06:00",
+            "horaFin": "14:00",
+            "grupo": [],
+            "especialidad": [
+                "java"
+            ]
+        },
+        {
+            "id": 5,
+            "nombre": "Carlos",
+            "apellido": "Rueda",
+            "correo": "carlos@gmail.com",
+            "password": "1234",
+            "horaInicio": "14:00",
+            "horaFin": "22:00",
+            "grupo": [],
+            "especialidad": [
+                "java"
+            ]
+        },
+        {
+            "id": 6,
+            "nombre": "Edwin",
+            "apellido": "Santos",
+            "correo": "edwin@gmail.com",
+            "password": "1234",
+            "horaInicio": "06:00",
+            "horaFin": "18:00",
+            "grupo": [],
+            "especialidad": [
+                "java",
+                "netcore"
+            ]
+        }
+    ]
+}

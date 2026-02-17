@@ -26,16 +26,22 @@ def crear_grupos():
     print("Bloques disponibles:")
 
     bloques = []
-    inicio = trainer["horaInicio"]
+    inicio = int(trainer["horaInicio"][:2])
+    fin_hora = int(trainer["horaFin"][:2])
     contador = 1
 
-    while inicio < trainer["horaFin"]:
+    while inicio < fin_hora:
 
         fin = inicio + 4
         ocupado = False
 
         for g in grupos:
-            if g["trainerId"] == trainer["id"] and g["horaInicio"] == inicio:
+            grupo_hora = g["horaInicio"]
+            if isinstance(grupo_hora, str):
+                grupo_hora_int = int(str(grupo_hora)[:2])
+            else:
+                grupo_hora_int = int(grupo_hora)
+            if g.get("trainerId", g.get("trainer_id")) == trainer["id"] and grupo_hora_int == inicio:
                 ocupado = True
                 break
 
