@@ -17,7 +17,7 @@ def crear_grupos():
         print(
             i + 1, ".", trainers_list[i]["nombre"],
             "Horario:", trainers_list[i]["horaInicio"],
-            "-", trainers_list[i]["horaFin"]
+            "-", trainers_list[i]["horaFin"] 
         )
 
     profe = int(input("Seleccione profesor: "))

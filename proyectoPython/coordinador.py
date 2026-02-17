@@ -242,7 +242,7 @@ def menu_Coordinador():
 
                 if not campers:
                     print("No hay campers registrados")
-                    continue   # ✅ FIX (ANTES RETURN)
+                    continue  
 
                 id_buscar = input("Ingrese ID del camper: ")
                 grupo_nuevo = input("Ingrese grupo a asignar: ")
@@ -332,7 +332,7 @@ def menu_Coordinador():
 
                 if not grupos:
                     print("❌No hay grupos registrados")
-                    continue   # ✅ FIX
+                    continue 
 
                 id_grupo = input("Ingrese ID del grupo: ")
                 nueva_ruta = input("Ingrese nueva ruta: ")
