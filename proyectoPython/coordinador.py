@@ -4,16 +4,17 @@ from crear_Grupos import crear_grupos
 
 def menu_Coordinador():
     while True:
-        print("1.gestiona campers")
-        print("2.gestiona trainers")
-        print("3.aprobar prueba de ingreso")
-        print("4.crear grupos")
-        print("5.asignar camper a grupo")
-        print("6.listar campers por estado")
-        print("7.asignar ruta al grupo")
-        print("8.salir")
+        print("------ MENÚ COORDINADOR ------")
+        print("1. 📝 Gestiona campers")
+        print("2. 💼 Gestiona trainers")
+        print("3. 🔎 Aprobar prueba de ingreso")
+        print("4. 📖 Crear grupos")
+        print("5. 📒 Asignar camper a grupo")
+        print("6. 🧾 Listar campers por estado")
+        print("7. 📚 Asignar ruta al grupo")
+        print("8. 🔚 Salir")
 
-        opcion_raw = input("seleccione:")
+        opcion_raw = input("seleccione: ")
         try:
             opcion = int(opcion_raw)
         except ValueError:
@@ -22,9 +23,9 @@ def menu_Coordinador():
 
         if opcion == 1:
             print("----CAMPERS-----")
-            print("1.listar campers")
-            print("2.editar campers")
-            print("3.volver")
+            print("1. 👥 Listar campers")
+            print("2. ✏️ Editar campers")
+            print("3. 🔙 Volver")
 
             subopcion_raw = input("seleccione: ")
             try:
@@ -44,9 +45,9 @@ def menu_Coordinador():
                         print("❌No hay campers registrados")
                     else:
                         for camper in campers:
-                            print("ID:", camper["identificacion"])
-                            print("Nombre:", camper["nombres"], camper["apellidos"])
-                            print("Estado:", camper["estado"])
+                            print("ID: ", camper["identificacion"])
+                            print("Nombre: ", camper["nombres"], camper["apellidos"])
+                            print("Estado: ", camper["estado"])
 
                 except FileNotFoundError:
                     print(f"❌No existe el archivo de campers")
@@ -64,9 +65,9 @@ def menu_Coordinador():
                 for camper in campers:
                     if camper["identificacion"] == id_buscar:
                         print("✅ Camper encontrado")
-                        print("ID:", camper["identificacion"])
-                        print("Nombre:", camper["nombres"], camper["apellidos"])
-                        print("Estado:", camper["estado"])
+                        print("ID: ", camper["identificacion"])
+                        print("Nombre: ", camper["nombres"], camper["apellidos"])
+                        print("Estado: ", camper["estado"])
 
                         nuevo_estado = input("Ingrese nuevo estado: ")
 
@@ -99,11 +100,11 @@ def menu_Coordinador():
                 continue 
 
         elif opcion == 2:
-            print("1.añadir trainers")
-            print("2.editar trainers")
-            print("3.listar trainers")
-            print("4.eliminar trainers")
-            print("5.↩ volver")
+            print("1. 📝 Añadir trainers")
+            print("2. ✏️ Editar trainers")
+            print("3. 📜 Listar trainers")
+            print("4. ⛔ Eliminar trainers")
+            print("5. 🔙 Volver")
 
             subopcion_raw = input("seleccione una opcion: ")
             try:
@@ -363,4 +364,3 @@ def menu_Coordinador():
 
         else:
             print("Opción inválida, intente nuevamente.")
-
