@@ -1,6 +1,6 @@
 [
     {
-        "idGrupo": "J1",
+        "idGrupo": "P1",
         "trainer_id": 1,
         "ruta": "python",
         "salon": "Sputnik",
@@ -79,7 +79,7 @@
         ]
     },
     {
-        "idGrupo": "P1",
+        "idGrupo": "J1",
         "trainer_id": 2,
         "ruta": "Java",
         "salon": "Apollo",
@@ -167,7 +167,7 @@
         ]
     },
     {
-        "idGrupo": "E2",
+        "idGrupo": "C2",
         "trainer_id": 3,
         "ruta": "Java",
         "salon": "Orion",
