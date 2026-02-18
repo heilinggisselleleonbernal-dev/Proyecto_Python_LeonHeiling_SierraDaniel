@@ -24,7 +24,12 @@ def guardar_campers(campers):
         json.dump({"lista_Campers": campers}, archivo, indent=4, ensure_ascii=False)
 
 
-def menuCamper():
+def menuCamper(correoCamper):
+    campers = cargar_campers()
+    camper_encontrado = next((c for c in campers if c.get("correo") == correoCamper), None)
+    if not camper_encontrado:
+        print("No se encontró el camper con ese correo.")
+        return
     while True:
         print("-----------------------------------------------")
         print("Que es lo que quieres hacer?")
@@ -37,16 +42,9 @@ def menuCamper():
         opcion = input("Ingrese una opcion: ")
 
         if opcion == "1":
-            campers = cargar_campers()
             print("Tus datos personales:")
-            for camper in campers:
-                print(f"Nombre: {camper['nombres']} {camper['apellidos']}")
-                print(f"Identificación: {camper['identificacion']}")
-                print(f"Correo: {camper.get('correo', 'No disponible')}")
-                print(f"Teléfono: {camper.get('telefono', 'No disponible')}")
-                print(f"Estado: {camper.get('estado', 'No disponible')}")
-                print(f"Riesgo: {camper.get('riesgo', 'No disponible')}")
-                print("-----------------------------------------------")
+            for key, value in camper_encontrado.items():
+                print(f"{key}: {value}")
 
         elif opcion == "2":
             grupos = cargar_grupos()

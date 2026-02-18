@@ -153,7 +153,16 @@
             },
             {
                 "nombre": "Backend Java",
-                "evaluaciones": []
+                "evaluaciones": [
+                    {
+                        "idCamper": "201",
+                        "actividad": 100.0,
+                        "practica": 88.0,
+                        "teorica": 36.0,
+                        "definitiva": 73.6,
+                        "aprobado": true
+                    }
+                ]
             }
         ]
     },

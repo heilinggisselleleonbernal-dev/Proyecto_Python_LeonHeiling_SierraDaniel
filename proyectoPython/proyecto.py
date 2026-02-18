@@ -20,11 +20,15 @@ while True:
     print("------------Bienvenido a Campusland------------")
     print("1. 🔑 inicia sesion")
     print("2. 📝 registrarse")
-    opcion = int(input(" seleccione una opcion: "))
+    try:
+        opcion = int(input(" seleccione una opcion: "))
+    except ValueError:
+        print("Por favor ingrese un número válido (1 o 2).\n")
+        continue
     if opcion == 1:
         usuarios =  cargar_Usuarios()
-        correo= input ("➡ingrese su correo: ")
-        password=input("➡ingrese su contraseña: ")
+        correo= input ("➡ ingrese su correo: ")
+        password=input("➡ ingrese su contraseña: ")
         encontrado= False
         for usuario in usuarios:
             if usuario["correo"] == correo and usuario["password"] == password:
@@ -41,7 +45,7 @@ while True:
                             trainers_data = json.load(archivo)
                             trainers_list = trainers_data.get("lista_Trainers", [])
                             for t in trainers_list:
-                                if t.get("correo") == usuario.get("correo"):
+                                if t.get("correo") == usuario.get("correo"): 
                                     usuario["id"] = t.get("id")
                                     break
                     except Exception:
@@ -50,7 +54,7 @@ while True:
                     break
                 elif usuario["rol"] == "camper":
                     print("👋bienvenido camper")
-                    menuCamper()
+                    menuCamper(usuario["correo"])
                     break
         
         if not encontrado:
