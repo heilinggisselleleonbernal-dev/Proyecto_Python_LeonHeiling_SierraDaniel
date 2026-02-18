@@ -1,4 +1,3 @@
-
 import json
 import os
 
@@ -42,10 +41,10 @@ def menuTrainer(trainer):
     while True:
         print("-----------------------------------------------")
         print("Que es lo que quieres hacer?")
-        print("1. Ver grupos asignados y sus campers")
-        print("2. Calificar modulos")
-        print("3. Ver promedios de los modulos")
-        print("4. Salir")
+        print("1. 👥 Ver grupos asignados y sus campers")
+        print("2. 📑 Calificar modulos")
+        print("3. 📊 Ver promedios de los modulos")
+        print("4. 🔚 Salir")
         print("-----------------------------------------------")
         opcion = input("Ingrese una opcion: ")
 
@@ -151,7 +150,5 @@ def menuTrainer(trainer):
 
         elif opcion == "4":
             print("Saliendo del programa...")
-            break   
-
-
+            break 
                                   
