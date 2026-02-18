@@ -34,7 +34,7 @@ def menuCamper(correo):
         print("2. 👥 Ver grupo asignado")
         print("3. 📊 Ver notas por módulo")
         print("4. ⚠ Revisar estado y riesgo")
-        print("5. 🔙 Salir")
+        print("5. 🔚 Salir")
 
         try:
             opcion = int(input("Seleccione una opción: "))
