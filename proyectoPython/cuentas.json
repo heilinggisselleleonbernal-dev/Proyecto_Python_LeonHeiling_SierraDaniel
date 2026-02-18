@@ -5,11 +5,6 @@
         "rol": "coordinador"
     },
     {
-        "correo": "danielsierra@gmail.com",
-        "password": "1234",
-        "rol": "camper"
-    },
-    {
         "correo": "sebastianfeo@gmail.com",
         "password": "122",
         "rol": "camper"
